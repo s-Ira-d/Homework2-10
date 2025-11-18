@@ -7,65 +7,64 @@ const intervalId = setInterval(() => {
 
   if (counter === 5) {
     clearInterval(intervalId);
-    console.log("інтервал зупинено.");
   }
 }, 1000);
 
 //2 *анімація елементів*
-let position = 50;
-let size = 50;
+// let position = 50;
+// let size = 50;
 
-const box = document.getElementById("box");
+// const box = document.getElementById("box");
 
-const animationInterval = setInterval(() => {
-  position += 5; // рух вправо
-  size += 2; // збільшення розміру
+// const animationInterval = setInterval(() => {
+//   position += 5; // рух вправо
+//   size += 2; // збільшення розміру
 
-  box.style.left = position + "px";
-  box.style.width = size + "px";
-  box.style.height = size + "px";
+//   box.style.left = position + "px";
+//   box.style.width = size + "px";
+//   box.style.height = size + "px";
 
-  // Зупинка анімації
-  if (size >= 120) {
-    clearInterval(animationInterval);
-    console.log("анімація завершена");
-  }
-}, 100);
+//   // Зупинка анімації
+//   if (size >= 120) {
+//     clearInterval(animationInterval);
+//     console.log("анімація завершена");
+//   }
+// }, 100);
 
 //3 *інтерактивна гра*
-let score = 0;
-let timeLeft = 10;
+// let score = 0;
+// let timeLeft = 10;
 
-const scoreEl = document.getElementById("score");
-const timeEl = document.getElementById("time");
-const target = document.getElementById("target");
+// const scoreEl = document.getElementById("score");
+// const timeEl = document.getElementById("time");
+// const target = document.getElementById("target");
 
-// Інтервал руху мішені
-const moveInterval = setInterval(() => {
-  const x = Math.random() * (window.innerWidth - 100);
-  const y = Math.random() * (window.innerHeight - 100);
-  target.style.left = x + "px";
-  target.style.top = y + "px";
-}, 700);
+// // Інтервал руху мішені
+// const moveInterval = setInterval(() => {
+//   const x = Math.random() * (window.innerWidth - 100);
+//   const y = Math.random() * (window.innerHeight - 100);
+//   target.style.left = x + "px";
+//   target.style.top = y + "px";
+// }, 700);
 
-// Таймер гри
-const gameTimer = setInterval(() => {
-  timeLeft--;
-  timeEl.textContent = timeLeft;
+// // Таймер гри
+// const gameTimer = setInterval(() => {
+//   timeLeft--;
+//   timeEl.textContent = timeLeft;
 
-  if (timeLeft <= 0) {
-    clearInterval(moveInterval);
-    clearInterval(gameTimer);
-    target.style.display = "none";
-    alert(`гру завершено! Ваш результат: ${score} очок.`);
-  }
-}, 1000);
+//   if (timeLeft <= 0) {
+//     clearInterval(moveInterval);
+//     clearInterval(gameTimer);
+//     target.style.display = "none";
+//     alert(`гру завершено! Ваш результат: ${score} очок.`);
+//   }
+// }, 1000);
 
-// Клік по мішені
-target.addEventListener("click", () => {
-  score++;
-  scoreEl.textContent = score;
-});
+// // Клік по мішені
+// target.addEventListener("click", () => {
+//   score++;
+//   scoreEl.textContent = score;
+// });
 
 //4 *контроль часу*
 const secondsInput = document.getElementById("secondsInput");
@@ -76,7 +75,7 @@ startBtn.addEventListener("click", () => {
   const seconds = Number(secondsInput.value);
 
   if (isNaN(seconds) || seconds <= 0) {
-    message.textContent = "будь ласка, введіть коректне число секунд!";
+    message.textContent = "введіть коректне число секунд!";
     return;
   }
 
