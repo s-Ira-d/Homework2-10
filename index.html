@@ -9,15 +9,44 @@
     <script type="module" src="./js/main.js"></script>
 
     <!-- 2 -->
-    <div id="box1" class="box"></div>
-    <div id="box2" class="box"></div>
-    <div id="box3" class="box"></div>
+    <div id="box"></div>
+
+    <style>
+      #box {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        margin: 50px;
+      }
+    </style>
 
     <!-- 3 -->
-    <h2>очки: <span id="score">0</span></h2>
-    <h3>час: <span id="time">10</span> сек</h3>
+    <h1>натискай на червону кнопку!</h1>
+    <div id="clicks">кількість натисків: 0</div>
 
-    <div id="target"></div>
+    <div id="gameArea">
+      <div class="target"></div>
+    </div>
+
+    <style>
+      #gameArea {
+        width: 400px;
+        height: 400px;
+        margin: 20px auto;
+        border: 2px solid #333;
+        position: relative;
+        background-color: #f0f0f0;
+      }
+
+      .target {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        position: absolute;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+    </style>
 
     <!-- 4 -->
     <input
