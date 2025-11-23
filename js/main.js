@@ -41,11 +41,11 @@ function moveTarget() {
   const maxX = gameArea.clientWidth - target.clientWidth;
   const maxY = gameArea.clientHeight - target.clientHeight;
 
-  const randomX = Math.floor(Math.random() * maxX);
-  const randomY = Math.floor(Math.random() * maxY);
+  const x = Math.random() * maxX;
+  const y = Math.random() * maxY;
 
-  target.style.left = randomX + "px";
-  target.style.top = randomY + "px";
+  target.style.left = x + "px";
+  target.style.top = y + "px";
 }
 
 const interval = setInterval(moveTarget, 2000);
